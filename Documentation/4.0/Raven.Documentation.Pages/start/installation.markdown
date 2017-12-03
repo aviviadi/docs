@@ -12,7 +12,13 @@ RavenDB 4 is cross-platform. You can use it on these platforms:
 
 ## Prerequisites  
 
-For Windows, Microsoft Visual C++ 2015 Redistributable Package should be installed.
+# Windows: Microsoft Visual C++ 2015 Redistributable Package should be installed prior to RavenDB launch. Also see : https://docs.microsoft.com/en-us/dotnet/core/windows-prerequisites
+# Linux/MacOS: libsodium (1.0.13 or up) should be installed prior to RavenDB launch. Also see: https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites or https://docs.microsoft.com/en-us/dotnet/core/macos-prerequisites
+  i.e. (Ubuntu 16.x): apt-get install libsodium-18 libunwind8 liblttng-ust0 libcurl3 libssl1.0.0 libuuid1 libkrb5 zlib1g libicu55
+       (MacOS 10.12): brew install libsodium
+# Raspbian (RaspberryPI III, kernel 4.9+): ...
+
+
 
 ## Downloading the Server  
 
@@ -63,7 +69,7 @@ For more options and information on running RavenDB under Docker, please visit t
 
 <hr />
 
-### Installing RavenDB on a Windows or Linux Host Machine
+### Installing RavenDB on a Windows, Linux or MacOS Host Machine
 
 1. Extract the zip/tar file to a directory of your choice.  
 
@@ -89,7 +95,6 @@ You can read all about it in the [Configuration Section](). For now we'll stick 
 
     {  
         "ServerUrl": "http://localhost:8080",  
-        "DataDir": "APPDRIVE:/Raven",  
         "RunInMemory": false  
     }  
 
@@ -98,14 +103,5 @@ Once things are set up and the server is running, you can access our GUI, the [R
 ![Figure 2: Accessing the Studio for the first time.](images\studio.png)
 
 You are ready to continue to the next section, [Getting to Know RavenDB](getting-to-know).
-
-<hr />
-
-### Installing RavenDB on OS X
-
-
-<hr />
-
-### Installing RavenDB on a Raspberry Pi
 
 <hr />
